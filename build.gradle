@@ -1,5 +1,15 @@
+plugins {
+  id 'org.sonarqube' version '2.6.2'
+}
+
 apply plugin: 'java'
 
 version = '1.0.0'
 sourceCompatibility = 10
 targetCompatibility = 10
+
+sonarqube {
+  properties {
+    property "sonar.host.url", "http://localhost:9000/"
+  }
+}
